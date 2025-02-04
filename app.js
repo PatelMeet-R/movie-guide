@@ -31,9 +31,9 @@ searchForm.addEventListener("submit" ,(e) =>{
 let getMovieInfo = async (movie) => {
     try{
         const APIkey = "a8e43023";
-        
-        let url = `http://www.omdbapi.com/?apikey=${APIkey}&t=${movie}`;
-        
+
+        let url = `https://www.omdbapi.com/?apikey=${APIkey}&t=${movie}`;
+
         let res = await fetch(url);
         let data = await  res.json();
         console.log(data);
@@ -76,5 +76,5 @@ const showMovieData = (data) => {
     <P><strong>Duration :</strong> ${Runtime}</P>
     <P><strong> cast :</strong> ${actors}</P>
     <P><strong>Plot :</strong> ${Plot}</P> `;
-    
+
 }
